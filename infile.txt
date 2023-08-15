@@ -1,0 +1,24 @@
+
+WORKDIR /home/app-frontend
+
+RUN npm i -g npm@9.6.7 && \
+    npm i && \
+    npm i create-react-app
+
+
+WORKDIR /home/api
+
+RUN npm i -g npm@9.6.7 && \
+    npm i -g @nestjs/cli
+
+    
+    volumes:
+      - "./front/app-frontend:/home/app-frontend"
+
+    
+    volumes:
+      - "./back/api:/home/api"
+
+WORKDIR /home
+
+COPY ./api ./api
