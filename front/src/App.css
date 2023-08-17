@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app-header {
+  background-color: #ff4141;
+  color: white;
+  padding: 20px;
+}
+
+.app-footer {
+  background-color: #f7f7f7;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-main {
+  flex-grow: 1;
+  margin-top: 85px; /* ヘッダーの高さ + 上の余白 */
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  max-width: 1000px;
+}
