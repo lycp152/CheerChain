@@ -6,11 +6,19 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
   const navigation = useNavigate();
 
   const handleLogout = () => {
-    // ログアウト処理を行う際に呼ばれる関数
-    // ログアウト処理が完了したら setIsLoggedIn(false) を実行してログアウト状態にする
     setIsLoggedIn(false);
-    // ログアウト後に遷移する場所を指定する（例えば、トップページ）
     navigation("/");
+  };
+
+  // MetaMask連携の処理
+  const handleConnectMetaMask = async () => {
+    try {
+      // MetaMaskとの接続処理を実行
+      await window.ethereum.enable(); // ユーザーに接続を許可するダイアログが表示されます
+      setIsLoggedIn(true); // ログイン状態に設定
+    } catch (error) {
+      console.error("MetaMask連携エラー:", error);
+    }
   };
 
   return (
@@ -19,16 +27,15 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
         <h1>CheerChain</h1>
       </Link>
       <div className="header-links">
-        {/* ログインしていない場合に表示 */}
         {!isLogin && (
           <>
-            <button onClick={() => navigation("/signup")}>MetaMask連携</button>
+            {/* MetaMask連携ボタンを表示 */}
+            <button onClick={handleConnectMetaMask}>MetaMask連携</button>
           </>
         )}
-        {/* ログインしている場合に表示 */}
         {isLogin && (
           <>
-            <button onClick={() => navigation("/login")}>
+            <button onClick={() => navigation("/makeproject")}>
               プロジェクト作成
             </button>
             <button onClick={handleLogout}>MetaMask連携解除</button>
