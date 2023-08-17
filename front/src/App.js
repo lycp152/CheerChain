@@ -13,15 +13,7 @@ const App = () => {
         <Header isLogin={isLogin} setIsLoggedIn={setIsLoggedIn} />
         <main className="app-main">
           <Routes>
-            {isLogin ? (
-              <>
-                <Route path="/" element={<HomeFeed />} />
-              </>
-            ) : (
-              <>
-                <Route path="/" element={<About />} />
-              </>
-            )}
+            <Route path="/" element={<HomeFeed />} />
           </Routes>
         </main>
         {/* <footer className="app-footer">
