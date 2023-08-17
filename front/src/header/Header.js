@@ -22,15 +22,15 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
         {/* ログインしていない場合に表示 */}
         {!isLogin && (
           <>
-            <button onClick={() => navigation("/login")}>
-              プロジェクト作成
-            </button>
             <button onClick={() => navigation("/signup")}>MetaMask連携</button>
           </>
         )}
         {/* ログインしている場合に表示 */}
         {isLogin && (
           <>
+            <button onClick={() => navigation("/login")}>
+              プロジェクト作成
+            </button>
             <button onClick={handleLogout}>MetaMask連携解除</button>
           </>
         )}

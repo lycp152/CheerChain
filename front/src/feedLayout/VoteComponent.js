@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import VoteItem from "./VoteItem";
 
-const VoteComponent = ({ question, options }) => {
+const VoteComponent = ({ question, options, remainingTime }) => {
   const [votes, setVotes] = useState(options.map(() => 0));
   const [selectedOption, setSelectedOption] = useState(null);
   const [hasVoted, setHasVoted] = useState(false);
@@ -23,7 +23,6 @@ const VoteComponent = ({ question, options }) => {
 
   return (
     <div className="vote-component">
-      <h2 className="vote-question">{question}</h2>
       <div className="vote-options">
         {options.map((option, index) => (
           <VoteItem
@@ -36,6 +35,12 @@ const VoteComponent = ({ question, options }) => {
             totalVotes={totalVotes}
           />
         ))}
+      </div>
+      <div className="vote-summary">
+        <p>
+          <span className="total-votes">{totalVotes}票</span>
+          {/* <span className="remaining-time">・残り: {remainingTime}</span> */}
+        </p>
       </div>
     </div>
   );

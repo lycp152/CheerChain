@@ -7,23 +7,18 @@ const mockPostsData = [
     username: "アスタロー",
     userId: "@astero",
     timestamp: "2023-07-05 10:00",
-    content: "今朝の朝食は",
+    content: "朝食は",
     mediaUrl: "", // メディアのURLを追加
-    comments: 5,
-    repost: 7,
-    likes: 10,
+    voteOptions: ["パン派", "ごはん派", "シリアル派"], // 投票の選択肢
   },
   {
     id: 2,
     username: "仮想 通子",
     userId: "@kaso-tsu-ko",
     timestamp: "2023-07-05 11:30",
-    content:
-      "仮想通貨の所有状況についてのアンケートを取りたいです！よろしくお願いします！",
+    content: "仮想通貨を",
     mediaUrl: "", // メディアのURLを追加
-    comments: 8,
-    repost: 10,
-    likes: 20,
+    voteOptions: ["持っている", "持っていない"], // 投票の選択肢
   },
   // ここに好きなデータを追加できます
 ];

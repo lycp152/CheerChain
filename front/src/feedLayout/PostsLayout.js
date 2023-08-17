@@ -15,13 +15,8 @@ const PostsLayout = ({ posts }) => {
           </div>
           <div className="post-content">{post.content}</div>
           {post.mediaUrl && <img src={post.mediaUrl} alt="Post Media" />}
-          {/* 投票コンポーネントを追加 */}
-          <VoteComponent options={["はい", "いいえ"]} />
-          <div className="post-actions">
-            <button className="comment-button">💬 {post.comments}</button>
-            <button className="repost-button">🔁 {post.repost}</button>
-            <button className="like-button">❤️ {post.likes}</button>
-          </div>
+          {/* 投稿ごとに異なる選択肢を持つ投票コンポーネントを追加 */}
+          {post.voteOptions && <VoteComponent options={post.voteOptions} />}
         </div>
       ))}
     </div>

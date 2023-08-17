@@ -6,9 +6,6 @@ const FeedLayout = ({ posts }) => {
   return (
     <>
       <PostsLayout posts={posts} />
-      <div className="post-card">
-        <PostForm />
-      </div>
     </>
   );
 };
