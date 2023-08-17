@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./header/Header";
-import About from "./about/About";
 import HomeFeed from "./feed/HomeFeed";
 
 const App = () => {
