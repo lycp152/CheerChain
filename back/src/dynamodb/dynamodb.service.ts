@@ -6,7 +6,15 @@ import {
   PutCommand,
   GetCommand,
   DeleteCommand,
+  ScanCommand,
 } from '@aws-sdk/lib-dynamodb';
+
+type Vote = {
+  ownerid: string;
+  voteid: string;
+  reward: number;
+};
+
 @Injectable()
 export class DynamodbService {
   private dynamoDBDocClient: DynamoDBDocumentClient;
@@ -67,6 +75,11 @@ export class DynamodbService {
         Reward: reward,
       },
     });
+    return this.resResult(command);
+  }
+
+  DownloadAllVoteTable() {
+    const command = new ScanCommand({ TableName: 'Votes' });
     return this.resResult(command);
   }
 

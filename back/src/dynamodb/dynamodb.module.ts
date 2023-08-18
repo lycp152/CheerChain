@@ -4,6 +4,7 @@ import { DynamodbService } from './dynamodb.service';
 
 @Module({
   controllers: [DynamodbController],
-  providers: [DynamodbService]
+  providers: [DynamodbService],
+  exports: [DynamodbService],
 })
 export class DynamodbModule {}
