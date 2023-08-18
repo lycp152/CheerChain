@@ -36,7 +36,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && npx thirdweb@latest upload build"
+    "deploy": "yarn build && npx thirdweb@latest upload build",
+    "bugfix": "cp ./webpack.config.js ./node_modules/react-scripts/config/webpack.config.js"
   },
   "eslintConfig": {
     "extends": [

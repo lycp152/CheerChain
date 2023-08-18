@@ -22,7 +22,7 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
           {connectionStatus === "connected" && (
             <>
               <button onClick={() => navigation("/StartVote")}>
-                投票を開始
+                投票を作成
               </button>
               {/* プロフィールページへのリンク */}
               <IconButton
