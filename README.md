@@ -48,7 +48,6 @@ fallback: {
   https: require.resolve("https-browserify"),
   zlib: require.resolve("browserify-zlib"),
   url: require.resolve("url/"),
-  // 他のポリフィルもここに追加
 },
 ````
 を追加してください。
