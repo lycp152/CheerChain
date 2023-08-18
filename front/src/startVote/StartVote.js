@@ -35,12 +35,17 @@ const StartVote = () => {
       <form onSubmit={handleSubmit}>
         <br />
         <label>質問：</label>
-        <textarea value={content} onChange={handleContentChange} required />
+        <textarea
+          value={content}
+          onChange={handleContentChange}
+          required
+          placeholder="例: どのお菓子が一番好き？"
+        />
         <br />
         <label>投票選択肢</label>
         <input
           type="text"
-          placeholder="選択肢をカンマで区切って入力（例: 選択肢1, 選択肢2, 選択肢3）"
+          placeholder="選択肢をカンマで区切って入力（例: きのこ, たけのこ, すぎのこ）"
           value={voteOptions}
           onChange={handleVoteOptionsChange}
           required
@@ -53,6 +58,7 @@ const StartVote = () => {
           value={rewardAmount}
           onChange={handleRewardAmountChange}
           required
+          placeholder="0.01"
         />
         <br />
         <button type="submit">投票を開始</button>
