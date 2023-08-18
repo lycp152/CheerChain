@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   ConnectWallet,
@@ -16,6 +16,11 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
   // テーマを作成
   const theme = createTheme();
   const address = useAddress();
+
+  // addressの変更を監視し、変更されたときにコンソールに出力
+  useEffect(() => {
+    console.log(address);
+  }, [address]);
 
   return (
     <ThemeProvider theme={theme}>
@@ -56,7 +61,6 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
               align: "center",
             }}
             className="header-button"
-            onConnect={console.log(address)}
           />
         </div>
       </header>
