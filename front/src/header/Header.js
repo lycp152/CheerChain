@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ConnectWallet, useConnectionStatus } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useConnectionStatus,
+  useAddress,
+} from "@thirdweb-dev/react";
 import { IconButton, ThemeProvider, createTheme } from "@mui/material";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./Header.css";
@@ -11,6 +15,12 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
 
   // テーマを作成
   const theme = createTheme();
+  const address = useAddress();
+
+  // ConnectWalletが接続されたときの処理
+  const handleConnect = () => {
+    console.log(address); // コンソールにログを出力
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -51,6 +61,7 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
               align: "center",
             }}
             className="header-button"
+            onConnect={handleConnect}
           />
         </div>
       </header>
