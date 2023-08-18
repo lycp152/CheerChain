@@ -5,8 +5,8 @@ import UserProfile from "./UserProfile";
 const Profile = () => {
   const userProfile = {
     profilePicture: "URL_TO_PROFILE_PICTURE",
-    username: "ねこねこ🐈",
-    userId: "@nekoneko",
+    username: "アスタロー",
+    userId: "@astaro",
     followers: 1000,
     following: 500,
   };
@@ -14,7 +14,7 @@ const Profile = () => {
   return (
     <div className="profile-container">
       <UserProfile userProfile={userProfile} />
-      <UserPosts />
+      <UserPosts UserPosts={userProfile} />
     </div>
   );
 };
