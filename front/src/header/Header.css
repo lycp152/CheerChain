@@ -1,0 +1,46 @@
+.app-header {
+  background-color: #ff4141;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000; /* ヘッダーを最前面に表示 */
+  height: 40px;
+}
+
+.header-logo {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo h1 {
+  margin: 0;
+}
+
+.header-links {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: medium;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.header-button {
+  color: #ff4141;
+  background-color: #fff;
+}

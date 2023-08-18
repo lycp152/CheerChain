@@ -1,0 +1,63 @@
+.profile-container {
+  flex-grow: 1;
+  padding: 10px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  background-color: #fff;
+  padding: 18px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.follow-info {
+  margin-top: 10px;
+  display: flex; /* 横並びにするために追加 */
+}
+
+.follow,
+.follower {
+  margin: 5px;
+  color: #888;
+}
+
+.bold-number {
+  color: #000;
+  font-weight: bold;
+}
+
+.user-posts {
+  margin-top: 20px;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.post-content {
+  font-size: 16px;
+}
+
+.post-timestamp {
+  color: #888;
+  font-size: 12px;
+}

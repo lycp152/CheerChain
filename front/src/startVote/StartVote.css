@@ -1,0 +1,55 @@
+.start-project {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.start-project h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.start-project form {
+  display: flex;
+  flex-direction: column;
+}
+
+.start-project label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.start-project input[type="text"],
+.start-project input[type="number"],
+.start-project textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.start-project input[type="text"],
+.start-project input[type="number"],
+.start-project textarea {
+  width: 97.5%;
+}
+
+.start-project textarea {
+  resize: vertical;
+}
+
+.start-project button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-project button[type="submit"]:hover {
+  background-color: #0056b3;
+}

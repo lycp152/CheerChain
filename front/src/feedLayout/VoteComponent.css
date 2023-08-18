@@ -1,0 +1,52 @@
+.vote-component {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.vote-question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vote-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s; /* 追加 */
+  border: 2px solid #007bff; /* 追加 */
+}
+
+.vote-item.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: transparent; /* 追加 */
+}
+
+.vote-content {
+  flex-grow: 1;
+  display: flex;
+  align-items: center; /* 追加 */
+}
+
+.vote-option {
+  font-size: 16px;
+  margin-right: 10px; /* 追加 */
+}
+
+.vote-count {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.vote-icon {
+  font-size: 20px;
+}
