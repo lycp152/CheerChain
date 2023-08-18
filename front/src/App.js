@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./header/Header";
 import HomeFeed from "./feed/HomeFeed";
 import MyProfile from "./user/MyProfile";
-import StartProject from "./StartProject";
+import StartVote from "./startVote/StartVote";
 import { useConnectionStatus } from "@thirdweb-dev/react";
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
             <Route path="/" element={<HomeFeed />} />
             <Route path="/profile" element={<MyProfile />} />
             {connectionStatus === "connected" && (
-              <Route path="/startproject" element={<StartProject />} />
+              <Route path="/startvote" element={<StartVote />} />
             )}
           </Routes>
         </main>

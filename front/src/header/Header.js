@@ -21,8 +21,8 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
         <div className="header-links">
           {connectionStatus === "connected" && (
             <>
-              <button onClick={() => navigation("/startproject")}>
-                プロジェクトを始める
+              <button onClick={() => navigation("/StartVote")}>
+                投票を開始
               </button>
               {/* プロフィールページへのリンク */}
               <IconButton

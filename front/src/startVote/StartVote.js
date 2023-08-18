@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./StartProject.css"; // スタイルを適用するためのスタイルシート
+import "./StartVote.css"; // スタイルを適用するためのスタイルシート
 
-const StartProject = () => {
+const StartVote = () => {
   const [content, setContent] = useState("");
   const [voteOptions, setVoteOptions] = useState("");
 
@@ -20,10 +20,10 @@ const StartProject = () => {
 
   return (
     <div className="start-project">
-      <h2>新しい投稿を作成</h2>
+      <h2>新しい投票を作成</h2>
       <form onSubmit={handleSubmit}>
         <br />
-        <label>投稿内容：</label>
+        <label>質問：</label>
         <textarea value={content} onChange={handleContentChange} required />
         <br />
         <label>投票選択肢：</label>
@@ -35,10 +35,10 @@ const StartProject = () => {
           required
         />
         <br />
-        <button type="submit">投稿する</button>
+        <button type="submit">投票を開始</button>
       </form>
     </div>
   );
 };
 
-export default StartProject;
+export default StartVote;
