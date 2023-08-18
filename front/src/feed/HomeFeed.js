@@ -5,7 +5,7 @@ const mockPostsData = [
   {
     id: 1,
     username: "アスタロー",
-    userId: "@astero",
+    userId: "@astaro",
     timestamp: "2023-07-05 10:00",
     content: "朝食は",
     mediaUrl: "", // メディアのURLを追加
