@@ -1,52 +1,60 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ConnectWallet, useConnectionStatus } from "@thirdweb-dev/react";
+import { IconButton, ThemeProvider, createTheme } from "@mui/material";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./Header.css";
 
 const Header = ({ isLogin, setIsLoggedIn }) => {
   const navigation = useNavigate();
   const connectionStatus = useConnectionStatus();
 
-  // const handleLogout = () => {
-  //   setIsLoggedIn(false);
-  //   navigation("/");
-  // };
-
-  // // MetaMask連携の処理
-  // const handleConnectMetaMask = async () => {
-  //   try {
-  //     // MetaMaskとの接続処理を実行
-  //     await window.ethereum.enable(); // ユーザーに接続を許可するダイアログが表示されます
-  //     setIsLoggedIn(true); // ログイン状態に設定
-  //   } catch (error) {
-  //     console.error("MetaMask連携エラー:", error);
-  //   }
-  // };
+  // テーマを作成
+  const theme = createTheme();
 
   return (
-    <header className="app-header">
-      <Link to="/" className="header-logo">
-        <h1>CheerChain</h1>
-      </Link>
-      <div className="header-links">
-        {connectionStatus === "connected" && (
-          <>
-            <button onClick={() => navigation("/startproject")}>
-              プロジェクトを始める
-            </button>
-          </>
-        )}
-        {/* MetaMask連携ボタンを表示 */}
-        <ConnectWallet
-          theme="light"
-          dropdownPosition={{
-            side: "bottom",
-            align: "center",
-          }}
-          className="header-button"
-        />
-      </div>
-    </header>
+    <ThemeProvider theme={theme}>
+      <header className="app-header">
+        <Link to="/" className="header-logo">
+          <h1>CheerChain</h1>
+        </Link>
+        <div className="header-links">
+          {connectionStatus === "connected" && (
+            <>
+              <button onClick={() => navigation("/startproject")}>
+                プロジェクトを始める
+              </button>
+              {/* プロフィールページへのリンク */}
+              <IconButton
+                component={Link}
+                to="/profile"
+                aria-label="プロフィール"
+                className="header-button"
+                sx={{
+                  width: "56px", // カスタムのアイコン幅
+                  height: "56px", // カスタムのアイコン高さ
+                  "&:hover": {
+                    background: "transparent", // ホバー時の背景を透明にする
+                  },
+                }}
+              >
+                <AccountCircleIcon sx={{ fontSize: "40px", color: "#fff" }} />{" "}
+                {/* カスタムのアイコンサイズと色 */}
+              </IconButton>
+            </>
+          )}
+          {/* MetaMask連携ボタンを表示 */}
+          <ConnectWallet
+            theme="light"
+            dropdownPosition={{
+              side: "bottom",
+              align: "center",
+            }}
+            className="header-button"
+          />
+        </div>
+      </header>
+    </ThemeProvider>
   );
 };
 

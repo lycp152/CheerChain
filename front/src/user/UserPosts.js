@@ -7,7 +7,7 @@ const mockPostsData = [
     username: "ねこねこ🐈",
     userId: "@nekoneko",
     timestamp: "2023-07-05 10:00",
-    content: "最初の投稿！",
+    content: "ここに自分の投稿・コメント履歴を追加",
     mediaUrl: "", // メディアのURLを追加
     comments: 5,
     repost: 7,
@@ -18,7 +18,7 @@ const mockPostsData = [
     username: "ねこねこ🐈",
     userId: "@nekoneko",
     timestamp: "2023-07-05 11:30",
-    content: "初めまして！",
+    content: "ここに自分の投稿・コメント履歴を追加",
     mediaUrl: "", // メディアのURLを追加
     comments: 8,
     repost: 10,

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./header/Header";
 import HomeFeed from "./feed/HomeFeed";
+import MyProfile from "./user/MyProfile";
 import StartProject from "./StartProject";
 import { useConnectionStatus } from "@thirdweb-dev/react";
 
@@ -17,6 +18,7 @@ const App = () => {
         <main className="app-main">
           <Routes>
             <Route path="/" element={<HomeFeed />} />
+            <Route path="/profile" element={<MyProfile />} />
             {connectionStatus === "connected" && (
               <Route path="/startproject" element={<StartProject />} />
             )}
