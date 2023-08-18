@@ -18,7 +18,7 @@ const VoteItem = ({
     if (!selected && !disabled) {
       if (connectionStatus === "disconnected") {
         try {
-          // ウォレット接続用のポップアップを表示する
+          // ウォレット接続のポップアップを表示する
         } catch (error) {
           console.error("Error connecting to wallet:", error);
           // エラーメッセージを表示するなどの処理を行う

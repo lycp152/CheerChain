@@ -5,7 +5,7 @@ import Header from "./header/Header";
 import HomeFeed from "./feed/HomeFeed";
 
 const App = () => {
-  const [isLogin, setIsLoggedIn] = useState(false);
+  const [isLogin, setIsLoggedIn] = useState(true);
   return (
     <div className="app">
       <Router>
@@ -13,6 +13,7 @@ const App = () => {
         <main className="app-main">
           <Routes>
             <Route path="/" element={<HomeFeed />} />
+            <Route path="/start" element={<HomeFeed />} />
           </Routes>
         </main>
         {/* <footer className="app-footer">

@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet, useConnectionStatus } from "@thirdweb-dev/react";
 import "./Header.css";
 
 const Header = ({ isLogin, setIsLoggedIn }) => {
   const navigation = useNavigate();
+  const connectionStatus = useConnectionStatus();
 
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    navigation("/");
-  };
+  // const handleLogout = () => {
+  //   setIsLoggedIn(false);
+  //   navigation("/");
+  // };
 
   // // MetaMask連携の処理
   // const handleConnectMetaMask = async () => {
@@ -28,26 +29,22 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
         <h1>CheerChain</h1>
       </Link>
       <div className="header-links">
-        {!isLogin && (
+        {connectionStatus === "connected" && (
           <>
-            {/* MetaMask連携ボタンを表示 */}
-            <ConnectWallet
-              theme="light"
-              dropdownPosition={{
-                side: "bottom",
-                align: "center",
-              }}
-            />
-          </>
-        )}
-        {isLogin && (
-          <>
-            <button onClick={() => navigation("/makeproject")}>
-              プロジェクト作成
+            <button onClick={() => navigation("/startproject")}>
+              プロジェクトを始める
             </button>
-            <button onClick={handleLogout}>MetaMask連携解除</button>
           </>
         )}
+        {/* MetaMask連携ボタンを表示 */}
+        <ConnectWallet
+          theme="light"
+          dropdownPosition={{
+            side: "bottom",
+            align: "center",
+          }}
+          className="header-button"
+        />
       </div>
     </header>
   );
