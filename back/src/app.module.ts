@@ -6,10 +6,11 @@ import { UserModule } from './user/user.module';
 import { VoteModule } from './vote/vote.module';
 import { SessionService } from './session/session.service';
 import { SessionModule } from './session/session.module';
+import { ThirdwebService } from './thirdweb/thirdweb.service';
 
 @Module({
   imports: [DynamodbModule, UserModule, VoteModule, SessionModule],
   controllers: [AppController],
-  providers: [AppService, SessionService],
+  providers: [AppService, SessionService, ThirdwebService],
 })
 export class AppModule {}
