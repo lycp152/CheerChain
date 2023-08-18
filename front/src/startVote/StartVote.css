@@ -22,19 +22,21 @@
 }
 
 .start-project input[type="text"],
+.start-project input[type="number"],
 .start-project textarea {
-  padding: 8px;
-  margin-bottom: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
-.start-project input[type="text"] {
-  width: 100%;
+.start-project input[type="text"],
+.start-project input[type="number"],
+.start-project textarea {
+  width: 97.5%;
 }
 
 .start-project textarea {
-  width: 100%;
   resize: vertical;
 }
 
@@ -42,7 +44,7 @@
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 8px 15px;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
