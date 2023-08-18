@@ -54,7 +54,7 @@ const StartVote = () => {
           required
         />
         <br />
-        <label>報酬(ASTR)：</label>
+        <label>報酬(ASTR):</label>
         <input
           type="number"
           step="0.001"
