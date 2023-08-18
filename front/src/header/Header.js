@@ -17,11 +17,6 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
   const theme = createTheme();
   const address = useAddress();
 
-  // ConnectWalletが接続されたときの処理
-  const handleConnect = () => {
-    console.log(address); // コンソールにログを出力
-  };
-
   return (
     <ThemeProvider theme={theme}>
       <header className="app-header">
@@ -61,7 +56,7 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
               align: "center",
             }}
             className="header-button"
-            onConnect={handleConnect}
+            onConnect={console.log(address)}
           />
         </div>
       </header>
