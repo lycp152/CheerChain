@@ -11,12 +11,6 @@ body {
   justify-content: space-between;
 }
 
-.app-header {
-  background-color: #ff4141;
-  color: white;
-  padding: 20px;
-}
-
 .app-footer {
   background-color: #f7f7f7;
   bottom: 0;
@@ -30,4 +24,5 @@ body {
   margin-right: auto;
   overflow: hidden;
   max-width: 1000px;
+  width: 70%;
 }

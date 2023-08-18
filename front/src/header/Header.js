@@ -32,6 +32,7 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
           <>
             {/* MetaMask連携ボタンを表示 */}
             <ConnectWallet
+              theme="light"
               dropdownPosition={{
                 side: "bottom",
                 align: "center",
