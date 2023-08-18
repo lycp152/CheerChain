@@ -38,7 +38,6 @@ const Header = ({ isLogin, setIsLoggedIn }) => {
                 align: "center",
               }}
             />
-            {/* <button onClick={handleConnectMetaMask}>MetaMask連携</button> */}
           </>
         )}
         {isLogin && (

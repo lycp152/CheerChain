@@ -1,5 +1,6 @@
 import React from "react";
 import "./VoteComponent.css";
+import { useConnectionStatus } from "@thirdweb-dev/react";
 
 const VoteItem = ({
   option,
@@ -11,9 +12,20 @@ const VoteItem = ({
 }) => {
   const percentage = totalVotes === 0 ? 0 : (votes / totalVotes) * 100;
 
-  const handleClick = () => {
+  const connectionStatus = useConnectionStatus();
+
+  const handleClick = async () => {
     if (!selected && !disabled) {
-      onVote(option);
+      if (connectionStatus === "disconnected") {
+        try {
+          // ウォレット接続用のポップアップを表示する
+        } catch (error) {
+          console.error("Error connecting to wallet:", error);
+          // エラーメッセージを表示するなどの処理を行う
+        }
+      } else {
+        onVote(option);
+      }
     }
   };
 
