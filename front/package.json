@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.3",
@@ -11,8 +12,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
-    "@thirdweb-dev/react": "^3",
-    "@thirdweb-dev/sdk": "^3",
     "browserify-zlib": "^0.2.0",
     "ethers": "^5",
     "https-browserify": "^1.0.0",
@@ -26,6 +25,9 @@
     "web-vitals": "^3.1.0"
   },
   "devDependencies": {
+    "@thirdweb-dev/chains": "^0.1.44",
+    "@thirdweb-dev/react": "^3.14.32",
+    "@thirdweb-dev/sdk": "^3.10.51",
     "assert": "^2.0.0",
     "stream": "^0.0.2"
   },
