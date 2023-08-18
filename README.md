@@ -42,13 +42,15 @@ CheerChain の目的は、意思決定プロセスを透明性と分散化に基
 
 クローンした際、`node_modules/react-scripts/config/webpack.config.js`を編集する必要があります。<br />
 
-````fallback: {
+~
+fallback: {
   http: require.resolve("stream-http"),
   https: require.resolve("https-browserify"),
   zlib: require.resolve("browserify-zlib"),
   url: require.resolve("url/"),
   // 他のポリフィルもここに追加
-},```
+},
+~
 を追加してください。
 
 ## こだわったポイント
