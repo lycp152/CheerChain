@@ -5,7 +5,7 @@ import Header from "./header/Header";
 import HomeFeed from "./feed/HomeFeed";
 
 const App = () => {
-  const [isLogin, setIsLoggedIn] = useState(true);
+  const [isLogin, setIsLoggedIn] = useState(false);
   return (
     <div className="app">
       <Router>
@@ -16,7 +16,7 @@ const App = () => {
           </Routes>
         </main>
         {/* <footer className="app-footer">
-          <p>&copy; 2023 All rights reserved.</p>
+          <p>&copy; 2023 CheerChain All rights reserved.</p>
         </footer> */}
       </Router>
     </div>
