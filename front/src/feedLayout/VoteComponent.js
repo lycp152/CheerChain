@@ -5,6 +5,11 @@ const VoteComponent = ({ question, options, remainingTime }) => {
   const [votes, setVotes] = useState(options.map(() => 0));
   const [selectedOption, setSelectedOption] = useState(null);
   const [hasVoted, setHasVoted] = useState(false);
+  const [voteData, setVoteData] = useState({
+    question: question,
+    selectedOption: null,
+    hasVoted: false,
+  });
 
   const totalVotes = votes.reduce((total, count) => total + count, 0);
 
@@ -17,6 +22,11 @@ const VoteComponent = ({ question, options, remainingTime }) => {
         setVotes(newVotes);
         setSelectedOption(selectedOption);
         setHasVoted(true);
+        setVoteData({
+          ...voteData,
+          selectedOption: selectedOption,
+          hasVoted: true,
+        });
       }
     }
   };
@@ -30,7 +40,7 @@ const VoteComponent = ({ question, options, remainingTime }) => {
             option={option}
             votes={votes[index]}
             selected={selectedOption === option}
-            disabled={hasVoted}
+            disabled={voteData.hasVoted}
             onVote={handleVote}
             totalVotes={totalVotes}
           />

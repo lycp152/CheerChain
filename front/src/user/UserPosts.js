@@ -4,10 +4,10 @@ import MockPosts from "../feedLayout/PostsLayout";
 const mockPostsData = [
   {
     id: 1,
-    username: "ねこねこ🐈",
-    userId: "@nekoneko",
+    username: "アスタロー",
+    userId: "@astaro",
     timestamp: "2023-07-05 10:00",
-    content: "ここに自分の投稿・コメント履歴を追加",
+    content: "ここに自分の投稿履歴を追加",
     mediaUrl: "", // メディアのURLを追加
     comments: 5,
     repost: 7,
@@ -15,10 +15,10 @@ const mockPostsData = [
   },
   {
     id: 2,
-    username: "ねこねこ🐈",
-    userId: "@nekoneko",
+    username: "アスタロー",
+    userId: "@astaro",
     timestamp: "2023-07-05 11:30",
-    content: "ここに自分の投稿・コメント履歴を追加",
+    content: "ここに自分の投稿履歴を追加",
     mediaUrl: "", // メディアのURLを追加
     comments: 8,
     repost: 10,

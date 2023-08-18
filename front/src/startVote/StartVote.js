@@ -57,7 +57,7 @@ const StartVote = () => {
         <label>報酬(ASTR)：</label>
         <input
           type="number"
-          step="0.01"
+          step="0.001"
           name="rewardAmount"
           value={formData.rewardAmount}
           onChange={handleInputChange}
