@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "./StartVote.css"; // スタイルを適用するためのスタイルシート
+import "./StartVote.css";
 
 const StartVote = () => {
   const [content, setContent] = useState("");
   const [voteOptions, setVoteOptions] = useState("");
   const [rewardAmount, setRewardAmount] = useState("");
+  const [recruitmentCount, setRecruitmentCount] = useState("");
 
   const handleContentChange = (e) => {
     setContent(e.target.value);
@@ -18,15 +19,19 @@ const StartVote = () => {
     setRewardAmount(e.target.value);
   };
 
+  const handleRecruitmentCountChange = (e) => {
+    setRecruitmentCount(e.target.value);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // フォームのデータを使用して新しい投稿を作成する処理を追加
     const newVote = {
       content,
       voteOptions: voteOptions.split(",").map((option) => option.trim()),
-      rewardAmount: parseFloat(rewardAmount), // 仮想通貨の量を浮動小数点数に変換
+      rewardAmount: parseFloat(rewardAmount),
+      recruitmentCount: parseInt(recruitmentCount), // 募集する投票数を整数に変換
     };
-    console.log(newVote); // 作成した投票をログに表示
+    console.log(newVote);
   };
 
   return (
@@ -54,11 +59,20 @@ const StartVote = () => {
         <label>報酬(ASTR)：</label>
         <input
           type="number"
-          step="0.01" // 小数を許可するためのステップ値
+          step="0.01"
           value={rewardAmount}
           onChange={handleRewardAmountChange}
           required
           placeholder="0.01"
+        />
+        <br />
+        <label>募集する投票数：</label>
+        <input
+          type="number"
+          value={recruitmentCount}
+          onChange={handleRecruitmentCountChange}
+          required
+          placeholder="100"
         />
         <br />
         <button type="submit">投票を開始</button>
